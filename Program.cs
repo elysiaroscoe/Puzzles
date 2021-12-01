@@ -86,7 +86,7 @@ namespace Puzzles
         }
 
 
-        public static void Names()
+        public static List<string> Names()
         {
         List<string> names = new List<string>{"Todd", "Tiffany", "Charlie", "Geneva", "Sydney"};
         for (int i = 0; i < names.Count; i++)
@@ -101,6 +101,14 @@ namespace Puzzles
         {
             Console.WriteLine(name);
         }
+        for (int i = 0; i < names.Count; i++)
+        {
+            if (names[i].Length <= 5)
+            {
+                names.RemoveAt(i);
+            }
+        }
+        return names;
         }
     }
 }
